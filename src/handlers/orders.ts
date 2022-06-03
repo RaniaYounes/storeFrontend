@@ -81,9 +81,9 @@ const orderRoutes = (app: Application) => {
   app.post("/orders", createOrder);
   app.get("/orders/:id", showByOrderID);
   app.get("/orders/user/:id", showByUserID);
-  app.delete("/orders", deleteOrder);
+  app.delete("/orders/:id", deleteOrder);
   app.post("/orders/product",  createProductOrder);
-  app.delete("/orders/product", deleteProductOrder);
+  app.delete("/orders/product/:id", deleteProductOrder);
 };
 
 export default orderRoutes;

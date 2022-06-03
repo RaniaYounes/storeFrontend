@@ -54,7 +54,10 @@ describe('productsRepo', () => {
     expect(product.id).toEqual(1);
   });
   
-  
+  it("product delete method works as intented", async () => {
+    const deletedProduct = await store.delete("2");
+    expect(deletedProduct.id).toEqual(2);
+  });
   
   
 

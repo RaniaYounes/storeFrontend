@@ -48,4 +48,8 @@ describe('productsRepo', () => {
         const product = yield store.show("1");
         expect(product.id).toEqual(1);
     }));
+    it("product delete method works as intented", () => __awaiter(void 0, void 0, void 0, function* () {
+        const deletedProduct = yield store.delete("2");
+        expect(deletedProduct.id).toEqual(2);
+    }));
 });

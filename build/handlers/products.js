@@ -35,7 +35,7 @@ const create = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
 });
 const show = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        const product = yield newProductStore.show(req.body.id);
+        const product = yield newProductStore.show(req.params.id);
         res.json(product);
     }
     catch (error) {

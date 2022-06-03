@@ -42,10 +42,7 @@ describe('productsRepo', () => {
       expect(product.name ).toBeDefined
   })
 
-  //it('Should get product by id', async () => {
-    //  const product = await store.show(testProduct.id)
-      //expect(product.id).toBe(testProduct.id)
-  //})
+  
 
   it('Should get all products', async () => {
       const product = await store.index()
@@ -57,26 +54,10 @@ describe('productsRepo', () => {
     expect(product.id).toEqual(1);
   });
   
-  it("product delete method works as intented", async () => {
-    const deletedProduct = await store.delete("2");
-    expect(deletedProduct.id).toEqual(2);
-  });
   
-  // test delete product
-  //it('Should delete product', async () => {
-    //  const product = await store.delete(testProduct.id);
-     // expect(product).toBeTruthy();
-  //})
-})
-it("product updated as intended", async () => {
-  const updatedOrder = await store.update("1", {
-    name: "Apples",
-    price: 5,
-  });
-  expect(updatedOrder).toEqual({
-    id: 1,
-    name: "Apples",
-    price: 5,
-  });
+  
+  
+
+
 
 });

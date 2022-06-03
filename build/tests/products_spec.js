@@ -40,10 +40,6 @@ describe('productsRepo', () => {
         product.name = product.name;
         expect(product.name).toBeDefined;
     }));
-    //it('Should get product by id', async () => {
-    //  const product = await store.show(testProduct.id)
-    //expect(product.id).toBe(testProduct.id)
-    //})
     it('Should get all products', () => __awaiter(void 0, void 0, void 0, function* () {
         const product = yield store.index();
         expect(product.length).toBeGreaterThan(0);
@@ -52,24 +48,4 @@ describe('productsRepo', () => {
         const product = yield store.show("1");
         expect(product.id).toEqual(1);
     }));
-    it("product delete method works as intented", () => __awaiter(void 0, void 0, void 0, function* () {
-        const deletedProduct = yield store.delete("2");
-        expect(deletedProduct.id).toEqual(2);
-    }));
-    // test delete product
-    //it('Should delete product', async () => {
-    //  const product = await store.delete(testProduct.id);
-    // expect(product).toBeTruthy();
-    //})
 });
-it("product updated as intended", () => __awaiter(void 0, void 0, void 0, function* () {
-    const updatedOrder = yield store.update("1", {
-        name: "Apples",
-        price: 5,
-    });
-    expect(updatedOrder).toEqual({
-        id: 1,
-        name: "Apples",
-        price: 5,
-    });
-}));
